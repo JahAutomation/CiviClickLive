@@ -35,7 +35,7 @@ public class DeliverySettings_RedirectAdvocatesAfterTakingAction {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -83,8 +83,8 @@ public class DeliverySettings_RedirectAdvocatesAfterTakingAction {
 		WebElement _clickRedirectAdvocatesButton = driver
 		.findElement(By.cssSelector(_elements._redirectAdvocatesButton));
 		Thread.sleep(200);
-		_clickRedirectAdvocatesButton.click();
-		Thread.sleep(1000);
+		//_clickRedirectAdvocatesButton.click();
+		Thread.sleep(2000);
 
 		WebElement _redirectLink = driver.findElement
 		(By.cssSelector(_elements._redirectAdvocatesLinkTextArea));
@@ -134,7 +134,7 @@ public class DeliverySettings_RedirectAdvocatesAfterTakingAction {
 		//===================================================W I D G E T   N E W   T A B =====================================================//		
 		
 		if(!handles.equals(parentID)) {			
-			Thread.sleep(4000);
+			Thread.sleep(6000);
 			WebElement _widgetFirstName = driver.findElement
 			(By.cssSelector(_campaign._widgetFirstname));
 			_widgetFirstName.click();
@@ -253,7 +253,7 @@ public class DeliverySettings_RedirectAdvocatesAfterTakingAction {
 				//System.out.println("=====================================================");
 				System.out.println("Taking Screenshot..");
 				System.out.println("=====================================================");
-	            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DeliverySettings/RadioAdvcatesDirectLink.png"));   	           
+	            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DeliverySettings/RadioAdvcatesDirectLink.png"));   	           
 	            Thread.sleep(2000);
 	                 	            
 	        } catch (IOException e) {

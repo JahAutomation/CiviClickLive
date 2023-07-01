@@ -40,7 +40,7 @@ public class Display_ImageTop_Style {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -148,7 +148,7 @@ public class Display_ImageTop_Style {
 													System.out.println("Taking Screenshot..");
 													System.out.println("=====================================================");
 												
-										            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DisplayImageBackground/ImageTop.png"));   	           
+										            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DisplayImageBackground/ImageTop.png"));   	           
 										            Thread.sleep(2000);
 										                 	            
 										        } catch (IOException j) {

@@ -9,16 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import CampaignDataCreation.AllTextInputs;
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
-
 import java.awt.AWTException;
 import java.awt.Robot;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -41,7 +37,7 @@ public class FormSettingsPhoneRequired {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ============================================================== L O G I N
 		Thread.sleep(7000);
@@ -190,7 +186,7 @@ public class FormSettingsPhoneRequired {
 				System.out.println("=====================================================");
 				System.out.println("Taking Screenshot..");
 				System.out.println("=====================================================");			
-	            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/FormSettings/PhoneRequired1.png"));   	           
+	            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/FormSettings/PhoneRequired1.png"));   	           
 	            Thread.sleep(2000);                 	            
 	        } catch (IOException j) {
 	            System.out.println(j.getMessage());
@@ -214,7 +210,7 @@ public class FormSettingsPhoneRequired {
 									System.out.println("=====================================================");
 									System.out.println("Taking Screenshot..");
 									System.out.println("=====================================================");			
-									FileUtils.copyFile(_phoneArea, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/FormSettings/PhoneRequired2.png"));   	           
+									FileUtils.copyFile(_phoneArea, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/FormSettings/PhoneRequired2.png"));   	           
 									Thread.sleep(2000);                 	            
 								} catch (IOException j) {
 									System.out.println(j.getMessage());

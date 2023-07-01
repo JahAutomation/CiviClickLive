@@ -57,7 +57,7 @@ public class CampaignElements {
 	public String _gotoCampaignName = "#textarea";	
 	public String _makePhoneRequiredButton = "#xscroll > div.bubble-element.Group.baTaHww.bubble-r-container.flex.column > div.bubble-element.Group.baTaIaEaX2.bubble-r-container.flex.column > div.bubble-element.Group.baTaIaEa2.bubble-r-container.flex.row > div.bubble-element.ionic-IonicToggle.clickable-element > label";
 	public String _settings_SaveButton = "#save_campaign";	
-	public String _testTextArea1 = "#id-78500";
+	public String _testTextArea1 = "#id-38850";
 	public String _testTextAreaRedirectAdvocates = "#id-25100";
 	public String _testTextArea1EmailScreening = "#id-25100";	
 	public String _testTextArea2 = "#inner > div.bubble-element.Group.baTaKcd2.bubble-r-container.flex.column > div.bubble-element.Group.baTaKcu2.bubble-r-container.flex.column > div.bubble-element.RepeatingGroup.baTaOaGaA1.bubble-rg > div.bubble-element.group-item.bubble-r-container.flex.column.entry-2 > div > select";
@@ -68,6 +68,7 @@ public class CampaignElements {
 	public String _stateTextArea = "#input_state";
 	public String _ZIPTextArea = "#input_zip";
 	public String _sendMailButton = "#btn_send_email";
+	public String _clickSendMessageCheckbox = "#redcheckbox > svg:nth-child(1) > text:nth-child(1)";
 	//public String _sendMailButton = "/html/body/div[1]/div[6]/div[2]/div[2]/div/div/div[6]/div[13]/button[1]";
 	public String _phoneTextArea = "#phone_id";
 	public String _flag2 = "#email_title";
@@ -86,6 +87,6 @@ public class CampaignElements {
 	public String _republican = "#g-content > div.bubble-element.Group.baTaIlaW1.bubble-r-container.flex.column > div > div.bubble-element.Group.baTaJaFaK1.bubble-r-container.flex.row > div.clickable-element.bubble-element.Group.baTaJaFaL1.bubble-r-container.flex.column > div.bubble-element.Group.baTaJaFaR1.bubble-r-container.flex.column > div.bubble-element.RepeatingGroup.baTaJaFaU1.bubble-rg > div.bubble-element.group-item.bubble-r-container.flex.row.entry-1 > div > button > svg > text";
 	public String _democrat = "#g-content > div.bubble-element.Group.baTaIlaW1.bubble-r-container.flex.column > div > div.bubble-element.Group.baTaJaFaK1.bubble-r-container.flex.row > div.clickable-element.bubble-element.Group.baTaJaFaL1.bubble-r-container.flex.column > div.bubble-element.Group.baTaJaFaR1.bubble-r-container.flex.column > div.bubble-element.RepeatingGroup.baTaJaFaU1.bubble-rg > div.bubble-element.group-item.bubble-r-container.flex.row.entry-2 > div > button > svg > text";
 	public String _state = "#g-content > div.bubble-element.Group.baTaIlaW1.bubble-r-container.flex.column > div > div.bubble-element.Group.baTaJaFaK1.bubble-r-container.flex.row > div.clickable-element.bubble-element.Group.baTaJaFaL1.bubble-r-container.flex.column > div.bubble-element.Group.baTaJaFaW1.bubble-r-container.flex.column > div.bubble-element.RepeatingGroup.baTaJaFaZ1.bubble-rg > div.bubble-element.group-item.bubble-r-container.flex.column.entry-1 > div > button > svg > text";
-	
+	public String _duplicateDataButton = "div.group-item:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1)";
 	
 }

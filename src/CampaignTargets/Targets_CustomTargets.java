@@ -6,10 +6,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
-
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
@@ -18,7 +16,6 @@ import java.io.File;
 import java.io.IOException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-
 import CampaignSettings.Elements;
 
 public class Targets_CustomTargets {
@@ -38,7 +35,7 @@ public class Targets_CustomTargets {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -84,7 +81,7 @@ public class Targets_CustomTargets {
 								System.out.println("Taking Screenshot - Targets Congress Page..");
 								System.out.println("=====================================================");	
 								Thread.sleep(3000);					
-								FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CustomTargets/CongressMainPage.png"));   	           
+								FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CustomTargets/CongressMainPage.png"));   	           
 								Thread.sleep(2000);												
 							} catch (IOException e) {
 								System.out.println(e.getMessage());
@@ -125,7 +122,7 @@ public class Targets_CustomTargets {
 								System.out.println("Taking Screenshot - Custom Targets Page..");
 								System.out.println("=====================================================");	
 								Thread.sleep(3000);					
-								FileUtils.copyFile(_statesPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CustomTargets/CustomTargetsPage.png"));   	           
+								FileUtils.copyFile(_statesPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CustomTargets/CustomTargetsPage.png"));   	           
 								Thread.sleep(2000);												
 							} catch (IOException e) {
 								System.out.println(e.getMessage());
@@ -153,7 +150,7 @@ public class Targets_CustomTargets {
 													System.out.println("Taking Screenshot - Selected All Targets..");
 													System.out.println("=====================================================");	
 													Thread.sleep(5000);					
-													FileUtils.copyFile(_state, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CustomTargets/SelectedTargets.png"));   	           
+													FileUtils.copyFile(_state, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CustomTargets/SelectedTargets.png"));   	           
 													Thread.sleep(2000);												
 												} catch (IOException e) {
 													System.out.println(e.getMessage());
@@ -164,7 +161,7 @@ public class Targets_CustomTargets {
 													System.out.println("=====================================================");
 													WebElement _clickViewAddedTargets = driver.findElement
 													(By.cssSelector(_elements._viewAddedTargets));
-													Thread.sleep(1000);
+													Thread.sleep(5000);
 													_clickViewAddedTargets.click();
 													Thread.sleep(7000);
 													File _addedTargets = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -173,7 +170,7 @@ public class Targets_CustomTargets {
 																	System.out.println("Taking Screenshot - ViewAdded Targets..");
 																	System.out.println("=====================================================");	
 																	Thread.sleep(3000);					
-																	FileUtils.copyFile(_addedTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CustomTargets/View_AddedTargets.png"));   	           
+																	FileUtils.copyFile(_addedTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CustomTargets/View_AddedTargets.png"));   	           
 																	Thread.sleep(2000);												
 																} catch (IOException e) {
 																	System.out.println(e.getMessage());
@@ -185,7 +182,7 @@ public class Targets_CustomTargets {
 																	(By.cssSelector(_elements._X_removeButtonCustomTargets));
 																	Thread.sleep(300);
 																	_clickRemoveButton_X.click();										
-																	Thread.sleep(12000);
+																	Thread.sleep(10000);
 																																	
 																	System.out.println("Clicking Remove All Button..");
 																	System.out.println("=====================================================");
@@ -194,14 +191,14 @@ public class Targets_CustomTargets {
 																	(By.cssSelector(_elements._removeALLButton));
 																	Thread.sleep(1000);
 																	_clickRemoveALLButton.click();										
-																	Thread.sleep(13000);
+																	Thread.sleep(11000);
 																	File _removeAllTargets = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 																				try {
 																					//System.out.println("=====================================================");
 																					System.out.println("Taking Screenshot - Remove All Targets..");
 																					System.out.println("=====================================================");	
-																					Thread.sleep(7500);					
-																					FileUtils.copyFile(_removeAllTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CustomTargets/RemoveAllTargets.png"));   	           
+																					Thread.sleep(5000);					
+																					FileUtils.copyFile(_removeAllTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CustomTargets/RemoveAllTargets.png"));   	           
 																					Thread.sleep(2000);												
 																				} catch (IOException e) {
 																					System.out.println(e.getMessage());

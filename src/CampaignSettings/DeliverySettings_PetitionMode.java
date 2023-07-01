@@ -9,16 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import CampaignDataCreation.AllTextInputs;
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
-
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -40,7 +35,7 @@ public class DeliverySettings_PetitionMode {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		Thread.sleep(8000);
@@ -64,7 +59,7 @@ public class DeliverySettings_PetitionMode {
 
 		WebElement _gotoSettingsTab = driver.findElement
 		(By.cssSelector(_campaign._gotoSettingsTab));
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		_gotoSettingsTab.click();
 		Thread.sleep(500);
 		
@@ -76,8 +71,8 @@ public class DeliverySettings_PetitionMode {
 				
 		WebElement _clickPetitionModeButton = driver.findElement
 		(By.cssSelector(_elements._clickPetitionModeButton));
-		//Thread.sleep(200);
-		_clickPetitionModeButton.click();
+		Thread.sleep(200);
+		//_clickPetitionModeButton.click();
 		Thread.sleep(1000);
 										
 //		JavascriptExecutor js3 = (JavascriptExecutor) driver;
@@ -147,7 +142,7 @@ public class DeliverySettings_PetitionMode {
 						Thread.sleep(500);
 			
 							WebElement _testTextarea1 = driver.findElement
-							(By.cssSelector(_campaign._petitionTestTextArea1));
+							(By.cssSelector(_campaign._testTextArea1));
 							_testTextarea1.click();
 							_testTextarea1.sendKeys(_allText._test);
 							Thread.sleep(500);
@@ -244,7 +239,7 @@ public class DeliverySettings_PetitionMode {
 						System.out.println("Taking Screenshots..");
 						System.out.println("=====================================================");
 						Thread.sleep(500);		
-						FileUtils.copyFile(_petitonON, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DeliverySettings/Petition_ON.png"));   									  
+						FileUtils.copyFile(_petitonON, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotlive/DeliverySettings/Petition_ON.png"));   									  
 						Thread.sleep(2000);
 											
 					} catch (IOException e) {
@@ -262,7 +257,7 @@ public class DeliverySettings_PetitionMode {
 						System.out.println("Taking Screenshots..");
 						System.out.println("=====================================================");
 						Thread.sleep(500);		
-						FileUtils.copyFile(_petitonOFF, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DeliverySettings/Petition_OFF.png"));   									  
+						FileUtils.copyFile(_petitonOFF, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DeliverySettings/Petition_OFF.png"));   									  
 						Thread.sleep(2000);
 											
 					} catch (IOException e) {

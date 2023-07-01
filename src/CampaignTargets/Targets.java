@@ -33,7 +33,7 @@ public class Targets {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -76,9 +76,9 @@ public class Targets {
 							//System.out.println("=====================================================");
 							System.out.println("Taking Screenshot - Targets Congress Page..");
 							System.out.println("=====================================================");	
-							Thread.sleep(3000);					
+							Thread.sleep(2000);					
 							FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/CongressMain.png"));   	           
-							Thread.sleep(2000);												
+							Thread.sleep(1000);												
 						} catch (IOException e) {
 							System.out.println(e.getMessage());
 						}
@@ -88,7 +88,7 @@ public class Targets {
 											System.out.println("=====================================================");
 											WebElement _clickSelectAllButton = driver.findElement
 											(By.cssSelector(_elements._selectAllButton));
-											Thread.sleep(1000);
+											Thread.sleep(500);
 											_clickSelectAllButton.click();
 											Thread.sleep(6000);
 
@@ -99,14 +99,14 @@ public class Targets {
 							(By.cssSelector(_elements._clickSelectAddSelectedButton));
 							Thread.sleep(1000);
 							_clickSelectAddSelectedButton.click();
-							Thread.sleep(9000);
+							Thread.sleep(39000);
 							File screenshotMid = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 										try {
 											//System.out.println("=====================================================");
 											System.out.println("Taking Screenshot - Selected All Targets..");
 											System.out.println("=====================================================");	
 											Thread.sleep(5000);					
-											FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/CongressSelectedTargets.png"));   	           
+											FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/CongressSelectedTargets.png"));   	           
 											Thread.sleep(2000);												
 										} catch (IOException e) {
 											System.out.println(e.getMessage());
@@ -122,7 +122,7 @@ public class Targets {
 											System.out.println("Taking Screenshot - Added Targets..");
 											System.out.println("=====================================================");	
 											Thread.sleep(8000);					
-											FileUtils.copyFile(_addedTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/AddedTargets.png"));   	           
+											FileUtils.copyFile(_addedTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/AddedTargets.png"));   	           
 											Thread.sleep(2000);												
 										} catch (IOException e) {
 											System.out.println(e.getMessage());
@@ -143,14 +143,14 @@ public class Targets {
 											(By.cssSelector(_elements._removeALLButton));
 											Thread.sleep(1000);
 											_clickRemoveALLButton.click();										
-											Thread.sleep(15000);
+											Thread.sleep(38000);
 														File _removeAllTargets = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 														try {
 															//System.out.println("=====================================================");
 															System.out.println("Taking Screenshot - Remove All Targets..");
 															System.out.println("=====================================================");	
-															Thread.sleep(8000);					
-															FileUtils.copyFile(_removeAllTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/RemoveAllTargets.png"));   	           
+															Thread.sleep(7000);					
+															FileUtils.copyFile(_removeAllTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/RemoveAllTargets.png"));   	           
 															Thread.sleep(2000);												
 														} catch (IOException e) {
 															System.out.println(e.getMessage());

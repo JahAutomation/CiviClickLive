@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import CampaignDataCreation.Browser;
@@ -17,6 +18,14 @@ import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 import CampaignSettings.Elements;
+import java.awt.event.KeyEvent;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Targets_CustomTargets_BulkCreation {
 
@@ -28,40 +37,40 @@ public class Targets_CustomTargets_BulkCreation {
 		CampaignElements _campaign = new CampaignElements();
 		LoginElements _login = new LoginElements();
 		Browser _browser = new Browser();
-		AllTextInputs _allText = new AllTextInputs();
+		//AllTextInputs _allText = new AllTextInputs();
 		Elements _elements = new Elements();
-		
+		Robot robot = new Robot();
 				
-		// System.setProperty(_browser._browserPath, _browser._chromeDriver);
+		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		// WebDriver driver = new ChromeDriver();
-		WebDriver driver = new SafariDriver();
+		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
 		System.out.println("Log In..");
 		System.out.println("=====================================================");
 
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		WebElement _email = driver.findElement
-		(By.xpath(_login._email));
+		(By.cssSelector(_login._email));
 		Thread.sleep(200);
 		_email.click();
 		_email.sendKeys(_login._emailAccount);
 		WebElement _password = driver.findElement
-		(By.xpath(_login._password));
+		(By.cssSelector(_login._password));
 		_password.click();
 		_password.sendKeys(_login._passwordAccount);
 		WebElement _loginButton = driver.findElement
-		(By.xpath(_login._loginButton));
+		(By.cssSelector(_login._loginButton));
 		_loginButton.click();
-		Thread.sleep(17000);
+		Thread.sleep(12000);
 
 		WebElement _clickPublishedData = driver.findElement
 		(By.cssSelector(_campaign._petition_ClickDataPublishedStatusEditButton));
 		_clickPublishedData.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 		//System.out.println("=====================================================");
 		System.out.println("Navigate to Targets Tab..");
@@ -82,7 +91,7 @@ public class Targets_CustomTargets_BulkCreation {
 								System.out.println("Taking Screenshot - Targets Congress Page..");
 								System.out.println("=====================================================");	
 								Thread.sleep(3000);					
-								FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CustomTargets_Creation/CongressMainPage.png"));   	           
+								FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CustomTargets_Creation/CongressMainPage.png"));   	           
 								Thread.sleep(2000);												
 							} catch (IOException e) {
 								System.out.println(e.getMessage());
@@ -113,7 +122,7 @@ public class Targets_CustomTargets_BulkCreation {
 				(By.cssSelector(_elements._bulkUploadCustomTargets));
 				Thread.sleep(1000);
 				_clickBulkUpload.click();
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 
 				//System.out.println("=====================================================");
 				System.out.println("Click Browse Button..");
@@ -125,7 +134,72 @@ public class Targets_CustomTargets_BulkCreation {
 				Thread.sleep(3000);
 
 				//driver.get("/Users/jahsavaged/Downloads/Bulktargets.xlsx");
+	
+								System.out.println("Upload logo..");
+								System.out.println("=====================================================");								
+								robot.keyPress(KeyEvent.VK_TAB);
+								Thread.sleep(100);
+								robot.keyRelease(KeyEvent.VK_TAB);
+								Thread.sleep(100);							
+								robot.keyPress(KeyEvent.VK_B);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_B);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_U);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_U);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_L);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_L);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_K);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_K);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_T);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_T);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_A);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_A);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_R);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_R);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_G);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_G);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_E);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_E);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_T);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_T);
+									Thread.sleep(50);
+								robot.keyPress(KeyEvent.VK_S);
+								Thread.sleep(50);
+									robot.keyRelease(KeyEvent.VK_S);
+									Thread.sleep(50);
 
+								robot.keyPress(KeyEvent.VK_ENTER);
+								Thread.sleep(50);
+								robot.keyRelease(KeyEvent.VK_ENTER);
+								Thread.sleep(1000);
+								//System.out.println("=====================================================");
+								System.out.println("Mouse move to Logo and Click to Upload..");
+								System.out.println("=====================================================");	
+								robot.mouseMove(800, 320);
+								robot.mousePress(KeyEvent.BUTTON1_MASK); 
+								robot.delay(1000);
+								robot.mouseRelease(KeyEvent.BUTTON1_MASK);
+								robot.delay(4000);
+								robot.keyPress(KeyEvent.VK_ENTER);
+								Thread.sleep(2000);			
 							
 						
 												

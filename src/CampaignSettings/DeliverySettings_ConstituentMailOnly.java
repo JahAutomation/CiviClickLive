@@ -36,7 +36,7 @@ public class DeliverySettings_ConstituentMailOnly {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		Thread.sleep(8000);
@@ -51,7 +51,7 @@ public class DeliverySettings_ConstituentMailOnly {
 		WebElement _loginButton = driver.findElement
 		(By.cssSelector(_login._loginButton));
 		_loginButton.click();
-		Thread.sleep(12000);
+		Thread.sleep(15000);
 
 			WebElement _clickPublishedData = driver.findElement
 			(By.cssSelector(_campaign._petition_ClickDataPublishedStatusEditButton));
@@ -73,7 +73,7 @@ public class DeliverySettings_ConstituentMailOnly {
 						WebElement _clickConstituentMailOnlyButton = driver.findElement
 						(By.cssSelector(_elements._clickConstituentMailOnlyButton));
 						Thread.sleep(200);
-						_clickConstituentMailOnlyButton.click();
+						//_clickConstituentMailOnlyButton.click();
 						Thread.sleep(1000);
 													
 							WebElement _settings_SaveButton = driver.findElement
@@ -108,7 +108,7 @@ public class DeliverySettings_ConstituentMailOnly {
 		//===================================================W I D G E T   N E W   T A B =====================================================//		
 		
 		if(!handles.equals(parentID)) {			
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			WebElement _widgetFirstName = driver.findElement
 			(By.cssSelector(_campaign._widgetFirstname));
 			_widgetFirstName.click();
@@ -135,7 +135,7 @@ public class DeliverySettings_ConstituentMailOnly {
 						Thread.sleep(500);
 			
 							WebElement _testTextarea2 = driver.findElement
-							(By.cssSelector(_campaign._testTextArea2));
+							(By.cssSelector(_campaign._testTextArea2)); 
 							_testTextarea2.click();
 							Thread.sleep(500);
 			
@@ -262,7 +262,7 @@ public class DeliverySettings_ConstituentMailOnly {
 						System.out.println("Taking Screenshot..");
 						System.out.println("=====================================================");
 					
-			            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DeliverySettings/ConstintuentEmailOnly.png"));   	           
+			            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DeliverySettings/ConstintuentEmailOnly.png"));   	           
 			            Thread.sleep(2000);
 			                 	            
 			        } catch (IOException j) {

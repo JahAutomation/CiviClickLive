@@ -6,19 +6,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
-
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-
 import CampaignSettings.Elements;
 
 public class TargetsStates_Governor {
@@ -33,12 +28,12 @@ public class TargetsStates_Governor {
 		Browser _browser = new Browser();
 		//AllTextInputs _allText = new AllTextInputs();
 		Elements _elements = new Elements();
-		Robot robot = new Robot(); 
+		//Robot robot = new Robot(); 
 				
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -84,7 +79,7 @@ public class TargetsStates_Governor {
 								System.out.println("Taking Screenshot - Targets Congress Page..");
 								System.out.println("=====================================================");	
 								Thread.sleep(3000);					
-								FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/StatesGovernor/Governor_CongressMainPage.png"));   	           
+								FileUtils.copyFile(_congressMainPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/StatesGovernor/Governor_CongressMainPage.png"));   	           
 								Thread.sleep(2000);												
 							} catch (IOException e) {
 								System.out.println(e.getMessage());
@@ -125,7 +120,7 @@ public class TargetsStates_Governor {
 								System.out.println("Taking Screenshot - Targets States Page..");
 								System.out.println("=====================================================");	
 								Thread.sleep(3000);					
-								FileUtils.copyFile(_statesPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/StatesGovernor/Governor_StatesPage.png"));   	           
+								FileUtils.copyFile(_statesPage, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/StatesGovernor/Governor_StatesPage.png"));   	           
 								Thread.sleep(2000);												
 							} catch (IOException e) {
 								System.out.println(e.getMessage());
@@ -173,7 +168,7 @@ public class TargetsStates_Governor {
 													System.out.println("Taking Screenshot - Selected All Targets..");
 													System.out.println("=====================================================");	
 													Thread.sleep(5000);					
-													FileUtils.copyFile(_state, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/StatesGovernor/Governor_State_SelectedTargets.png"));   	           
+													FileUtils.copyFile(_state, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/StatesGovernor/Governor_State_SelectedTargets.png"));   	           
 													Thread.sleep(2000);												
 												} catch (IOException e) {
 													System.out.println(e.getMessage());
@@ -193,7 +188,7 @@ public class TargetsStates_Governor {
 																	System.out.println("Taking Screenshot - ViewAdded Targets..");
 																	System.out.println("=====================================================");	
 																	Thread.sleep(4000);					
-																	FileUtils.copyFile(_addedTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/StatesGovernor/Governor_StateView_AddedTargets.png"));   	           
+																	FileUtils.copyFile(_addedTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/StatesGovernor/Governor_StateView_AddedTargets.png"));   	           
 																	Thread.sleep(2000);												
 																} catch (IOException e) {
 																	System.out.println(e.getMessage());
@@ -221,7 +216,7 @@ public class TargetsStates_Governor {
 																					System.out.println("Taking Screenshot - Remove All Targets..");
 																					System.out.println("=====================================================");	
 																					Thread.sleep(7500);					
-																					FileUtils.copyFile(_removeAllTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Targets/StatesGovernor/Governor_State_RemoveAllTargets.png"));   	           
+																					FileUtils.copyFile(_removeAllTargets, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Targets/StatesGovernor/Governor_State_RemoveAllTargets.png"));   	           
 																					Thread.sleep(2000);												
 																				} catch (IOException e) {
 																					System.out.println(e.getMessage());

@@ -1,18 +1,14 @@
 package CampaignDataCreation;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot; 
@@ -26,13 +22,13 @@ public class CampaginDataCreation {
 		CampaignElements _campaign = new CampaignElements();
 		AllTextInputs _allTextInputs = new AllTextInputs();
 		Browser _browser = new Browser();
-		Robot robot = new Robot(); 
+		//Robot robot = new Robot(); 
 
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);			
 		WebDriver driver = new FirefoxDriver();
 		//WebDriver driver = new SafariDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 		String _var1 = "";
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -372,7 +368,7 @@ public class CampaginDataCreation {
 								System.out.println("Taking Screenshot..");
 								System.out.println("=====================================================");
 							
-					            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/CampaignCreation/NewCampaignCreated.png"));   	           
+					            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/CampaignCreation/NewCampaignCreated.png"));   	           
 					            Thread.sleep(2000);
 					                 	            
 					        } catch (IOException j) {

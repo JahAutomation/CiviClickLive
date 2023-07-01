@@ -37,7 +37,7 @@ public class DeliverySettings_EmailScreening {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -266,7 +266,7 @@ public class DeliverySettings_EmailScreening {
 											File screenshotBot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 											try {
 									                       
-									            FileUtils.copyFile(screenshotBot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DeliverySettings/EmailScreening.png"));   									  
+									            FileUtils.copyFile(screenshotBot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DeliverySettings/EmailScreening.png"));   									  
 									            Thread.sleep(2000);
 									                 	            
 									        } catch (IOException e) {

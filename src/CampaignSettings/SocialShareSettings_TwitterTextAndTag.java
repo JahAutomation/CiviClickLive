@@ -38,7 +38,7 @@ public class SocialShareSettings_TwitterTextAndTag {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -167,7 +167,7 @@ public class SocialShareSettings_TwitterTextAndTag {
 	            //System.out.println("=====================================================");
 				System.out.println("Taking Email Screenshot..");
 				System.out.println("=====================================================");       
-	            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/SocialShareSettings/TwitterTextAndTags.png"));   	           
+	            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/SocialShareSettings/TwitterTextAndTags.png"));   	           
 	            Thread.sleep(2000);
 	                 	            
 	        } catch (IOException e) {

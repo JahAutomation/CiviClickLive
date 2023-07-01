@@ -9,12 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import CampaignDataCreation.AllTextInputs;
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
-
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +37,7 @@ public class Themes {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -125,28 +123,27 @@ public class Themes {
 																		WebElement _fontStyleButtonValue = driver.findElement
 																		(By.cssSelector(_elements._fontStyleValue));
 																		Thread.sleep(100);
-																		_fontStyleButtonValue.click();
-																		Thread.sleep(500);
-														
+																		_fontStyleButtonValue.click();			
+																		Thread.sleep(500);														
 																		
 																				WebElement _clickPreviewButton = driver.findElement
 																				(By.cssSelector(_elements._clickPreviewButton));
 																				Thread.sleep(200);
 																				_clickPreviewButton.click();
-																				Thread.sleep(8000);
+																				Thread.sleep(16000);
 																				File _previewTheme = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 																					try {
 																						//System.out.println("=====================================================");
 																						System.out.println("Taking Preview Screenshot..");
 																						System.out.println("=====================================================");
 																					
-																						FileUtils.copyFile(_previewTheme, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Display/Themes/PreviewThemes.png"));   	           
+																						FileUtils.copyFile(_previewTheme, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Display/Themes/PreviewThemes.png"));   	           
 																						Thread.sleep(2000);
 																											
 																					} catch (IOException j) {
 																						System.out.println(j.getMessage());
 																					}
-		
+																						Thread.sleep(4000);
 																						WebElement _clickFlag = driver.findElement
 																						(By.cssSelector(_elements._flag1));
 																						Thread.sleep(100);
@@ -202,7 +199,7 @@ public class Themes {
 								System.out.println("Taking Publish Screenshot..");
 								System.out.println("=====================================================");
 							
-								FileUtils.copyFile(_publishTheme, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Display/Themes/DisplayThemes.png"));   	           
+								FileUtils.copyFile(_publishTheme, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Display/Themes/DisplayThemes.png"));   	           
 								Thread.sleep(2000);
 													
 							} catch (IOException j) {
@@ -258,7 +255,7 @@ public class Themes {
 															System.out.println("Taking Widget Screenshot..");
 															System.out.println("=====================================================");
 														
-												            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/Display/Themes/WidgetThemes.png"));   	           
+												            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/Display/Themes/WidgetThemes.png"));   	           
 												            Thread.sleep(2000);
 												                 	            
 												        } catch (IOException j) {

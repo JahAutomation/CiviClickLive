@@ -44,7 +44,7 @@ public class SocialShareSettings_SendThankYouEmail {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -68,7 +68,7 @@ public class SocialShareSettings_SendThankYouEmail {
 		WebElement _clickPublishedData = driver.findElement
 		(By.cssSelector(_campaign._petition_ClickDataPublishedStatusEditButton));
 		_clickPublishedData.click();
-		Thread.sleep(6000);
+		Thread.sleep(7500);
 
 		//System.out.println("=====================================================");
 		System.out.println("Navigate to Settings Tab..");
@@ -88,7 +88,7 @@ public class SocialShareSettings_SendThankYouEmail {
 		WebElement _clickSendThankYouEmailCheckBox = driver.findElement
 		(By.cssSelector(_elements._clickSendThankYouEmailCheckBox));
 		Thread.sleep(200);
-		//_clickSendThankYouEmailCheckBox.click();
+		_clickSendThankYouEmailCheckBox.click();
 		Thread.sleep(1000);
 					
 		JavascriptExecutor js3 = (JavascriptExecutor) driver;
@@ -398,7 +398,7 @@ public class SocialShareSettings_SendThankYouEmail {
 															//System.out.println("=====================================================");
 															System.out.println("Taking Email Screenshot..");
 															System.out.println("=====================================================");
-												            FileUtils.copyFile(screenshotBot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/SocialShareSettings/SendThankYouEmail.png"));   									  
+												            FileUtils.copyFile(screenshotBot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/SocialShareSettings/SendThankYouEmail.png"));   									  
 												            Thread.sleep(2000);
 												                 	            
 												        } catch (IOException e) {

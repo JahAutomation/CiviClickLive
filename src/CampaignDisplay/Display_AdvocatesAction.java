@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -23,7 +23,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -46,7 +46,7 @@ public class Display_AdvocatesAction {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -61,8 +61,7 @@ public class Display_AdvocatesAction {
 		WebElement _password = driver.findElement
 		(By.cssSelector(_login._password));
 		_password.click();
-		_password.sendKeys(_login._passwordAccount);
-		WebElement _loginButton = driver.findElement
+		_password.sendKeys(_login._passwordAccount);		WebElement _loginButton = driver.findElement
 		(By.cssSelector(_login._loginButton));
 		_loginButton.click();
 		Thread.sleep(12000);
@@ -70,7 +69,7 @@ public class Display_AdvocatesAction {
 		WebElement _clickPublishedData = driver.findElement
 		(By.cssSelector(_campaign._petition_ClickDataPublishedStatusEditButton));
 		_clickPublishedData.click();
-		Thread.sleep(6000);
+		Thread.sleep(9000);
 
 		//System.out.println("=====================================================");
 		System.out.println("Navigate to Display Tab..");
@@ -154,7 +153,7 @@ public class Display_AdvocatesAction {
 																System.out.println("Taking Screenshot..");
 																System.out.println("=====================================================");
 															
-																FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DisplayAdvocatesAction/GoalCircleEnabled.png"));   	           
+																FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DisplayAdvocatesAction/GoalCircleEnabled.png"));   	           
 																Thread.sleep(2000);
 																					
 															} catch (IOException e) {
@@ -172,7 +171,7 @@ public class Display_AdvocatesAction {
 														System.out.println("Taking Screenshot..");
 														System.out.println("=====================================================");
 													
-														FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DisplayAdvocatesAction/GoalCircleDisabled.png"));   	           
+														FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DisplayAdvocatesAction/GoalCircleDisabled.png"));   	           
 														Thread.sleep(2000);
 																			
 													} catch (IOException j) {

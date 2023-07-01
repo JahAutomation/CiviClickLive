@@ -6,10 +6,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
-
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
@@ -17,8 +15,6 @@ import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 import java.awt.Robot;
-import java.awt.event.KeyEvent;
-
 import CampaignSettings.Elements;
 
 public class TargetsStates_Senate {

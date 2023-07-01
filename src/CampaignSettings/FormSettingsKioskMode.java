@@ -12,12 +12,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import CampaignDataCreation.AllTextInputs;
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.File;
@@ -45,7 +43,7 @@ public class FormSettingsKioskMode {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ============================================================== L O G I N
 		System.out.println("=====================================================");
@@ -248,7 +246,7 @@ public class FormSettingsKioskMode {
 								//System.out.println("=====================================================");
 								System.out.println("Taking Screenshot..");
 								System.out.println("=====================================================");      
-								FileUtils.copyFile(screenshot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/FormSettings/KioskScreenshot1.png"));   
+								FileUtils.copyFile(screenshot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/FormSettings/KioskScreenshot1.png"));   
 					            //screenShot.main(args);
 					            Thread.sleep(2000);
 					                 	            
@@ -286,7 +284,7 @@ public class FormSettingsKioskMode {
 									        	 //System.out.println("=====================================================");
 												System.out.println("Taking Screenshot..");
 												System.out.println("=====================================================");             
-									            FileUtils.copyFile(screenshotBot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/FormSettings/KioskScreenshot2.png"));   
+									            FileUtils.copyFile(screenshotBot, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/FormSettings/KioskScreenshot2.png"));   
 									            //screenShotBot.main(args);
 									            Thread.sleep(2000);
 									                 	            

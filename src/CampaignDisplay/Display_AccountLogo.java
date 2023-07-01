@@ -39,7 +39,7 @@ public class Display_AccountLogo {
 		WebDriver driver = new FirefoxDriver();
 		//ebDriver driver = new SafariDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -59,7 +59,7 @@ public class Display_AccountLogo {
 		WebElement _loginButton = driver.findElement
 		(By.cssSelector(_login._loginButton));
 		_loginButton.click();
-		Thread.sleep(12000);
+		Thread.sleep(13000);
 
 		WebElement _clickPublishedData = driver.findElement
 		(By.cssSelector(_campaign._petition_ClickDataPublishedStatusEditButton));
@@ -163,7 +163,7 @@ public class Display_AccountLogo {
 										(By.cssSelector(_elements._clickCampaignHostagePageLink));
 										Thread.sleep(200);
 										_clickWidgetLink.click();
-										Thread.sleep(13000);	
+										Thread.sleep(10000);	
 										
 										//======================SWITCH TO NEW WINDOW==================================//			
 										Set <String> handles = driver.getWindowHandles();		
@@ -173,7 +173,7 @@ public class Display_AccountLogo {
 										driver.switchTo().window(childID);
 										//=========================================================================//
 										if(!handles.equals(parentID)) {	
-											Thread.sleep(6000);	
+											Thread.sleep(5000);	
 											try{
 												WebElement _acountLogo = driver.findElement
 														(By.cssSelector(_elements._accountLogo));
@@ -187,7 +187,8 @@ public class Display_AccountLogo {
 															System.out.println("Taking Screenshot..");
 															System.out.println("=====================================================");
 														
-												            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DisplayAccountlogo/AccountlogoEnabled.png"));   	           
+												            FileUtils.copyFile(screenshotMid, 
+															new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DisplayAccountlogo/AccountlogoEnabled.png"));   	           
 												            Thread.sleep(2000);
 												                 	            
 												        } catch (IOException e) {
@@ -205,7 +206,8 @@ public class Display_AccountLogo {
 													System.out.println("Taking Screenshot..");
 													System.out.println("=====================================================");
 												
-										            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DisplayAccountlogo/AccountlogoDisabled.png"));   	           
+										            FileUtils.copyFile(screenshotMid, 
+													new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DisplayAccountlogo/AccountlogoDisabled.png"));   	           
 										            Thread.sleep(2000);
 										                 	            
 										        } catch (IOException j) {

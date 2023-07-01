@@ -8,15 +8,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import CampaignDataCreation.AllTextInputs;
 import CampaignDataCreation.Browser;
 import CampaignDataCreation.CampaignElements;
 import CampaignDataCreation.LoginElements;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -42,7 +40,7 @@ public class Display_WidgetCode {
 		System.setProperty(_browser._browserPath, _browser._chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get(_browser._browser);
+		driver.get(_browser._browserLive);
 
 		// ==============================================================
 		System.out.println("=====================================================");
@@ -111,7 +109,7 @@ public class Display_WidgetCode {
 				//To open  new tab
 				driver.switchTo().window(tabs.get(1));
 				Thread.sleep(1000);
-				driver.get("https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default");				
+				driver.get(_allText._w3SchoolLink);						
 				//Thread.sleep(3000);			
 						WebElement _clickHTMLTextEditor = driver.findElement
 						(By.cssSelector(_elements.__htmlEditor));
@@ -145,7 +143,7 @@ public class Display_WidgetCode {
 												System.out.println("Taking Screenshot..");
 												System.out.println("=====================================================");
 											
-									            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshot/DisplayWidgetCodeTest/WidgetCode.png"));   	           
+									            FileUtils.copyFile(screenshotMid, new File("/Users/jahsavaged/Desktop/CiviTestScreenshotLive/DisplayWidgetCodeTest/WidgetCode.png"));   	           
 									            Thread.sleep(2000);
 									                 	            
 									        } catch (IOException e) {
